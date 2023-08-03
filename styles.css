@@ -1,0 +1,117 @@
+
+
+.layout {
+    width: 100vw;
+    height: 90vh;
+  
+    display: grid;
+    grid:
+      "leftSide body rightSide" 80vh
+      "footer footer footer" 10vh
+      / 10vw 80vw 10vw;
+    gap: 0px;
+  }
+  
+
+
+  .header { grid-area: header; 
+    width: 100vw;
+    height: 10vh;
+
+    display: grid;
+    grid : "logo main mods settings" / 10vw 30vw 30vw 30vw; 
+  }
+
+
+  .logo { 
+    grid-area: logo;
+    width: 10vh;
+    height: 10vh; 
+  }
+  .main { grid-area: main; }
+  .mods { grid-area: mods; }
+  .settings { grid-area: settings; }
+  .leftSide { grid-area: leftSide; }
+  .body { grid-area: body; }
+  .rightSide { grid-area: rightSide; }
+  .footer { grid-area: footer; }
+  
+
+  #main {
+    display: grid;
+    outline: 1px solid black;
+    animation: show 1s;
+  }
+
+  #mods {
+    display: none;
+    outline: 1px solid black;
+    animation: none;
+  }
+
+  #settings {
+    display: none;
+    outline: 1px solid black;
+    animation: none;
+  }
+
+  .main {
+    text-align: center;
+    border: #ffffff 1px solid;
+    background-color: #242424;
+    color: #ffffff;
+  }
+
+  .settings {
+    text-align: center;
+    border: #ffffff 1px solid;
+    background-color: #242424;
+    color: #ffffff;
+  }
+
+  .mods {
+    text-align: center;
+    border: #ffffff 1px solid;
+    background-color: #242424;
+    color: #ffffff;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+    background-color: #242424;
+    color-scheme: dark;
+  }
+
+  button {
+    background-color: #242424;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.1s;
+    text-align: center;
+    margin: auto;
+    width: 6cm;
+    height: 1.5cm;
+
+  }
+
+  button:hover {
+    background-color: #ffffff;
+    color: #242424;
+  }
+
+  @keyframes hide {
+    100% {right: -100%;}
+  }
+
+  @keyframes show {
+      0% {right: 200%;}
+      100% {right: 0%;}
+  }

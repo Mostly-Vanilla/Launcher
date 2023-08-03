@@ -1,0 +1,15 @@
+{
+  "name": "mc-launcher",
+  "version": "1.0.0",
+  "description": "a simple minecraft launcher for distributing modpacks",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "GeraldTM",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.2.1",
+    "electron": "^25.3.2"
+  }
+}
