@@ -1,2 +1,2 @@
 # Launcher
-A Minecraft Launcher, making distributing your modpack easier
+A Minecraft Launcher writen as an electron app, making distributing your modpack easier
