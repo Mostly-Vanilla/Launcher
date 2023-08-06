@@ -1,3 +1,19 @@
+var CONFIG = require('./modpack.json');
+var slug = CONFIG.modpackSlug;
+var version = CONFIG.modpackVersion;
+var UA = CONFIG.modrinthUserAgent;
+
+var minecraft = CONFIG.MCVersion;
+var loader = CONFIG.modloader;
+var loaderVersion = CONFIG.modloaderVersion; 
+
+var theme = CONFIG.theme;
+var primaryColour = CONFIG.primaryColour;
+var secondaryColour = CONFIG.secondaryColour;
+
+var url = "https://modrinth.com/project/" + slug;
+
+
 const {app, BrowserWindow} = require('electron')
 const createWindow = () => {
     const win = new BrowserWindow({
@@ -14,17 +30,6 @@ const createWindow = () => {
 
 app.on('ready', createWindow);
 
-var CONFIG = require('./modpack.json');
-var slug = CONFIG.modpackSlug;
-var version = CONFIG.modpackVersion;
-
-var minecraft = CONFIG.MCVersion;
-var loader = CONFIG.modloader;
-var loaderVersion = CONFIG.modloaderVersion; 
-
-var theme = CONFIG.theme;
-var primaryColour = CONFIG.primaryColour;
-var secondaryColour = CONFIG.secondaryColour;
 
 function update(){
     
