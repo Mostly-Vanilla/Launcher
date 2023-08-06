@@ -10,6 +10,7 @@
       "footer footer footer" 10vh
       / 10vw 80vw 10vw;
     gap: 0px;
+    animation: show 0.5s;
   }
   
 
@@ -19,14 +20,16 @@
     height: 10vh;
 
     display: grid;
-    grid : "logo main mods settings" / 10vw 30vw 30vw 30vw; 
+    grid : "logo main mods settings" / 
+    10vh 3fr 3fr 3fr;
   }
 
 
   .logo { 
     grid-area: logo;
     width: 10vh;
-    height: 10vh; 
+    height: 10vh;
+    border-bottom: #ffffff 1px solid;
   }
   .main { grid-area: main; }
   .mods { grid-area: mods; }
@@ -39,41 +42,45 @@
 
   #main {
     display: grid;
-    outline: 1px solid black;
     animation: show 1s;
+  }
+
+  #main .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #mods {
     display: none;
-    outline: 1px solid black;
-    animation: none;
   }
 
   #settings {
     display: none;
-    outline: 1px solid black;
-    animation: none;
+  }
+
+
+  .header-content {
+    background-color: #242424;
+    color: #ffffff;
+    text-align: center;
+    border: #ffffff 1px solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-top: 2vh;
+    font-size: 6vh;
   }
 
   .main {
-    text-align: center;
-    border: #ffffff 1px solid;
-    background-color: #242424;
-    color: #ffffff;
+    border-bottom: none;
   }
 
   .settings {
-    text-align: center;
-    border: #ffffff 1px solid;
-    background-color: #242424;
-    color: #ffffff;
+    border-bottom: #ffffff 1px solid;
   }
 
   .mods {
-    text-align: center;
-    border: #ffffff 1px solid;
-    background-color: #242424;
-    color: #ffffff;
+    border-bottom: #ffffff 1px solid;
   }
 
   body {
@@ -90,16 +97,15 @@
     background-color: #242424;
     color: #ffffff;
     border: 1px solid #ffffff;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 5px;
-    font-size: 1em;
+    font-size: 6vh;
     cursor: pointer;
     transition: 0.1s;
     text-align: center;
     margin: auto;
-    width: 6cm;
-    height: 1.5cm;
-
+    width: 35vw;
+    height: 12vh;
   }
 
   button:hover {
@@ -108,10 +114,15 @@
   }
 
   @keyframes hide {
+    0% {right: 0%;}
     100% {right: -100%;}
   }
 
   @keyframes show {
       0% {right: 200%;}
       100% {right: 0%;}
+  }
+
+  .hideable{
+    animation: none;
   }

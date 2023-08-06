@@ -11,5 +11,9 @@
   "devDependencies": {
     "@electron-forge/cli": "^6.2.1",
     "electron": "^25.3.2"
+  },
+  "dependencies": {
+    "gmll": "^3.2.1",
+    "msmc": "^4.1.0"
   }
 }
