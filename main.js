@@ -3,10 +3,6 @@ var slug = CONFIG.modpackSlug;
 var version = CONFIG.modpackVersion;
 var UA = CONFIG.modrinthUserAgent;
 
-var minecraft = CONFIG.MCVersion;
-var loader = CONFIG.modloader;
-var loaderVersion = CONFIG.modloaderVersion; 
-
 var theme = CONFIG.theme;
 var primaryColour = CONFIG.primaryColour;
 var secondaryColour = CONFIG.secondaryColour;
