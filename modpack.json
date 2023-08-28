@@ -4,7 +4,7 @@
     "modpackSlug":"Modrinth Slug or ID",
     "modrinthUserAgent":"Modrinth User Agent",
      "_comment" : "version override: use this to set a specific modpack version to use: eg. latest, 1.0, 0.76.0-1.20.1",
-    "version override": "Default Version to use"
+    "version override": "Default Version to use",
 
     "theme":"dark",
     "primaryColour":"#5555FF",
