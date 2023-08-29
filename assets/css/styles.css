@@ -10,7 +10,7 @@
       "footer footer footer" 10vh
       / 10vw 80vw 10vw;
     gap: 0px;
-    animation: show 0.5s;
+    
   }
   
 
@@ -42,7 +42,6 @@
 
   #main {
     display: grid;
-    animation: show 1s;
   }
 
   #main .body {
@@ -69,18 +68,23 @@
     border-top-right-radius: 15px;
     padding-top: 2vh;
     font-size: 6vh;
-  }
-
-  .main {
     border-bottom: none;
   }
 
-  .settings {
-    border-bottom: #ffffff 1px solid;
+  .header-content:hover {
+    border-bottom: #c0c0c0 1px;
   }
 
-  .mods {
-    border-bottom: #ffffff 1px solid;
+  #main-head {
+    border-bottom: none;
+  }
+
+  #settings-head {
+    border-bottom: #ffffff 1px solid ;
+  }
+
+  #mods-head {
+    border-bottom: #ffffff 1px solid ;
   }
 
   body {
@@ -111,18 +115,4 @@
   button:hover {
     background-color: #ffffff;
     color: #242424;
-  }
-
-  @keyframes hide {
-    0% {right: 0%;}
-    100% {right: -100%;}
-  }
-
-  @keyframes show {
-      0% {right: 200%;}
-      100% {right: 0%;}
-  }
-
-  .hideable{
-    animation: none;
   }

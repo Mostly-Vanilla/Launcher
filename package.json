@@ -4,15 +4,23 @@
   "description": "a simple minecraft launcher for distributing modpacks",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "author": "GeraldTM",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@electron-forge/cli": "^6.2.1",
+    "@electron-forge/cli": "^6.4.1",
+    "@electron-forge/maker-deb": "^6.4.1",
+    "@electron-forge/maker-rpm": "^6.4.1",
+    "@electron-forge/maker-squirrel": "^6.4.1",
+    "@electron-forge/maker-zip": "^6.4.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.1",
     "electron": "^25.3.2"
   },
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "gmll": "^3.2.1",
     "msmc": "^4.1.0"
   }

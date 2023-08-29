@@ -7,18 +7,18 @@
     <body>
         <div class="layout header">
             <div class="logo">
-                <img src="icon.png" alt="logo" height="100%" width="100%">
+                <img src="assets/textures/icon.png" alt="logo" height="100%" width="100%">
             </div>
 
-            <div class="main header-content" onclick="main()">
+            <div class="main header-content" onclick="main()" id = "main-head">
                 Main
             </div>
 
-            <div class="mods header-content" onclick="mods()">
+            <div class="mods header-content" onclick="mods()" id="mods-head">
                 Mods
             </div>
 
-            <div class="settings header-content" onclick="settings()">
+            <div class="settings header-content" onclick="settings()" id="settings-head">
                 Settings
             </div>
 
@@ -50,31 +50,32 @@
     </body>
     <script>
         function main(){
-            document.querySelectorAll(".hideable").forEach(element => {
-                element.style.animation = " hide 1s";
-            });
             document.getElementById("mods").style.display = "none";
             document.getElementById("settings").style.display = "none";
             document.getElementById("main").style.display = "grid";
-            document.getElementById("main").style.animation = " show 1s";
+
+            document.getElementById("main-head").style.borderBottom = "none"
+            document.getElementById("mods-head").style.borderBottom = "#ffffff 1px solid"
+            document.getElementById("settings-head").style.borderBottom = "#ffffff 1px solid"
         }
         function mods(){
-            document.querySelectorAll(".hideable").forEach(element => {
-                element.style.animation = " hide 1s";
-            });
             document.getElementById("main").style.display = "none";
             document.getElementById("settings").style.display = "none";
             document.getElementById("mods").style.display = "grid";
-            document.getElementById("mods").style.animation = " show 1s";
+            
+            document.getElementById("main-head").style.borderBottom = "#ffffff 1px solid"
+            document.getElementById("mods-head").style.borderBottom = "none"
+            document.getElementById("settings-head").style.borderBottom = "#ffffff 1px solid"
         }
         function settings(){
-            document.querySelectorAll(".hideable").forEach(element => {
-                element.style.animation = " hide 1s";
-            });
             document.getElementById("main").style.display = "none";
             document.getElementById("mods").style.display = "none";
             document.getElementById("settings").style.display = "grid";
-            document.getElementById("settings").style.animation = " show 1s";
+            
+            
+            document.getElementById("main-head").style.borderBottom = "#ffffff 1px solid"
+            document.getElementById("mods-head").style.borderBottom = "#ffffff 1px solid"
+            document.getElementById("settings-head").style.borderBottom = "none"
         }
     </script>
 </html>

@@ -7,7 +7,7 @@ var theme = CONFIG.theme;
 var primaryColour = CONFIG.primaryColour;
 var secondaryColour = CONFIG.secondaryColour;
 
-var url = "https://modrinth.com/project/" + slug;
+
 
 
 const {app, BrowserWindow} = require('electron')
@@ -19,13 +19,13 @@ const createWindow = () => {
         webPreferences: {
         nodeIntegration: true
         },
-        icon: __dirname + '/icon.png'
+        icon: __dirname + '/assets/textures/icon.png'
     });
     win.loadFile('index.html');
 }
 
 app.on('ready', createWindow);
-
+app.on("activate", createWindow);
 
 function update(){
     
