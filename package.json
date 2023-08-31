@@ -21,7 +21,9 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
+    "file-saver": "^2.0.5",
     "gmll": "^3.2.1",
+    "jszip": "^3.10.1",
     "msmc": "^4.1.0"
   }
 }

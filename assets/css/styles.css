@@ -22,6 +22,7 @@
     display: grid;
     grid : "logo main mods settings" / 
     10vh 3fr 3fr 3fr;
+    background-color: #141414;
   }
 
 
@@ -37,7 +38,10 @@
   .leftSide { grid-area: leftSide; }
   .body { grid-area: body; }
   .rightSide { grid-area: rightSide; }
-  .footer { grid-area: footer; }
+  .footer { grid-area: footer; 
+    background-color: #141414;
+    border-top: #ffffff 1px solid;
+  }
   
 
   #main {
@@ -48,6 +52,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(../../assets/textures/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+  } 
+
+  #main .leftSide {
+    background-image: url(../../assets/textures/bg.png);
+    background-position: left;
+    filter: blur(2px);
+    
+  }
+
+  #main .rightSide {
+    background-image: url(../../assets/textures/bg.png);
+    background-position: right;
+    filter: blur(2px);
+  }
+
+  #main .footer{
+    padding-top: 5px;
   }
 
   #mods {
@@ -66,9 +91,10 @@
     border: #ffffff 1px solid;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    padding-top: 2vh;
+    padding-top: 1.25vh;
     font-size: 6vh;
     border-bottom: none;
+    margin-top: 4px;
   }
 
   .header-content:hover {
@@ -110,9 +136,12 @@
     margin: auto;
     width: 35vw;
     height: 12vh;
+    box-shadow: #ffffff 0px 0px 2px inset;
   }
 
   button:hover {
     background-color: #ffffff;
     color: #242424;
+    box-shadow: #ffffff 0px 0px 5px;
+    transition: all 0.25s;
   }

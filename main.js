@@ -7,7 +7,7 @@ var theme = CONFIG.theme;
 var primaryColour = CONFIG.primaryColour;
 var secondaryColour = CONFIG.secondaryColour;
 
-
+const shell = require('electron').shell;
 
 
 const {app, BrowserWindow} = require('electron')
@@ -22,10 +22,16 @@ const createWindow = () => {
         icon: __dirname + '/assets/textures/icon.png'
     });
     win.loadFile('index.html');
+    win.webContents.setWindowOpenHandler(({ url }) => {
+        shell.openExternal(url);
+        return { action: 'deny' };
+      });
 }
 
 app.on('ready', createWindow);
 app.on("activate", createWindow);
+
+
 
 function update(){
     
