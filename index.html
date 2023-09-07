@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
         <meta name="viewport" content="width=800, initial-scale=1" />
     </head>
-    <body>
+    <body onload="loadTheme('light')">
         <div class="layout header">
             <div class="logo">
                 <img src="assets/textures/icon.png" alt="logo" height="100%" width="100%">
@@ -51,7 +51,10 @@
         </section>
     
     </body>
+    <script src="assets/js/main.js">
+    </script>
     <script>
+        
         function main(){
             document.getElementById("mods").style.display = "none";
             document.getElementById("settings").style.display = "none";
@@ -81,5 +84,6 @@
             document.getElementById("settings-head").style.borderBottom = "none"
         }
     </script>
+    
 </html>
 

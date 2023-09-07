@@ -1,14 +1,7 @@
-var CONFIG = require('./modpack.json');
-var slug = CONFIG.modpackSlug;
-var version = CONFIG.modpackVersion;
-var UA = CONFIG.modrinthUserAgent;
-
-var theme = CONFIG.theme;
-var primaryColour = CONFIG.primaryColour;
-var secondaryColour = CONFIG.secondaryColour;
+const config = require('./assets/js/config.js')
+const CONFIG = config.CONFIG;
 
 const shell = require('electron').shell;
-
 
 const {app, BrowserWindow} = require('electron')
 const createWindow = () => {
@@ -26,7 +19,10 @@ const createWindow = () => {
         shell.openExternal(url);
         return { action: 'deny' };
       });
+    
 }
+
+
 
 app.on('ready', createWindow);
 app.on("activate", createWindow);

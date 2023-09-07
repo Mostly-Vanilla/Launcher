@@ -6,7 +6,25 @@
      "_comment" : "version override: use this to set a specific modpack version to use: eg. latest, 1.0, 0.76.0-1.20.1",
     "version override": "Default Version to use",
 
-    "theme":"dark",
-    "primaryColour":"#5555FF",
-    "secondaryColour":"#FFFF55"
+    "defaultTheme":"dark",
+    "themes":[
+        {
+            "name":"dark",
+            "primaryColour":"#ffffff",
+            "secondaryColour":"#242424",
+            "tertiaryColour":"#141414"
+        },
+        {
+            "name":"light",
+            "primaryColour":"#000000",
+            "secondaryColour":"#ffffff",
+            "tertiaryColour":"#141414"
+        },
+        {
+            "name":"template",
+            "primaryColour":"hex colour code",
+            "secondaryColour":"hex colour code",
+            "tertiaryColour":"hex colour code"
+        }
+    ]
 }
