@@ -1,7 +1,7 @@
 import json
 
 modpackconf = json.load(open("modpack.json"))
-appconf = json.load(open("launcher.json.json"))
+appconf = json.load(open("launcher.json"))
 userdata = json.load(open("userdata.json"))
 
 modpackVersion = modpackconf["modpackVersion"]
@@ -12,7 +12,7 @@ defaultTheme = modpackconf["defaultTheme"]
 themes = modpackconf["themes"]
 
 isInitialised = appconf["isInitialised"]
-appPath = appconf["appPath"]
+appPath = appconf["installPath"]
 
 
 
